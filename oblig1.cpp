@@ -14,11 +14,6 @@ private:
 
 public:
     LinkedList() : head(nullptr) {}
-
-    void leggTilStart(int verdi) {
-        Node* nyNode = new Node {verdi, head};
-        head = nyNode;
-    }
     
     // 1: Slett første element
     void slettFørste() {
@@ -215,7 +210,7 @@ int main() {
     srand(time(nullptr));
     for (int i = 0; i < 10; i++) {
         int tilfeldigTall = rand() % 100;
-        liste.leggTilStart(tilfeldigTall);
+        liste.leggTilSlutt(tilfeldigTall);
     }
 
     do {
